@@ -10,7 +10,7 @@ const About = () => (
         {/* Animated Logo with Glow */}
         <div className="flex-shrink-0 animate-bounce-slow shadow-2xl">
           <div className="bg-gradient-to-tr from-teal-400 to-cyan-400 rounded-full p-2 shadow-2xl border-4 border-white ring-8 ring-teal-500/20">
-            <img src="/profile.jpg" alt="Logo" className="w-40 h-40 rounded-full object-cover border-4 border-white shadow-lg" />
+            <img src="/profile2.jpg" alt="Logo" className="w-40 h-40 rounded-full object-cover border-4 border-white shadow-lg" />
           </div>
         </div>
         {/* Animated Text and Card */}

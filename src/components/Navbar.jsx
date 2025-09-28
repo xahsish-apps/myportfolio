@@ -15,7 +15,7 @@ const Navbar = () => {
           <div className="relative">
             <div className="absolute inset-0 rounded-full border-4 border-gradient-to-tr from-pink-400 via-yellow-300 to-cyan-400 animate-logo-glow"></div>
             <div className="bg-gradient-to-tr from-pink-400 via-yellow-300 to-cyan-400 rounded-full p-1 shadow-xl border-4 border-dashed border-cyan-400">
-              <img src="/profile.jpg" alt="Logo" className="w-12 h-12 rounded-full object-cover border-4 border-white shadow-lg" />
+              <img src="/profile2.jpg" alt="Logo" className="w-12 h-12 rounded-full object-cover border-4 border-white shadow-lg" />
             </div>
             {/* Unique frame: double border effect */}
             <div className="absolute inset-1 rounded-full border-2 border-white/60 pointer-events-none"></div>
