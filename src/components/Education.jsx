@@ -5,25 +5,25 @@ const education = [
     degree: "Bachelor of Technology (B.Tech) (MDU), Rohtak Haryana",
     field: "Computer Science & Engineering",
     institution: "st.andrews institute of technology and management farukhnagar Haryana",
-    year: "2024 - 2027",
+  year: "2023 - 2027",
     icon: (
       <svg width="36" height="36" fill="none" viewBox="0 0 24 24"><path d="M12 3L2 9l10 6 10-6-10-6zm0 13.5l-8-4.8V17a2 2 0 002 2h12a2 2 0 002-2v-5.3l-8 4.8z" fill="#14b8a6"/></svg>
     )
   },
   {
-    degree: "BSEB (X) Patna",
-    field: "Science (PCM)",
-    institution: "Alok Bharti Shikshan Sansthan,(X) Bettiah West Champaran Bihar",
-    year: "2004 - 2021",
+    degree: "Skills FullStack Developer",
+    field: "Training With Apna College",
+    institution: "Java (DSA)",
+    year: "2024",
     icon: (
       <svg width="36" height="36" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#22d3ee"/><path d="M8 16l4-8 4 8" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
     )
   },
    {
-    degree: "Diploma in Computer science Engineering",
+    degree: "10+2 G.P Maurya inter College SahJanwa Gorakhpur (UP)",
     field: "Science (PCM)",
-    institution: " Longowal Group of Colleges , Mohali Punjab " ,
-    year: "2021 - 2024",
+    institution: "G.P Maurya inter College SahJanwa Gorakhpur (UP)",
+    year: "2021 - 2023",
     icon: (
       <svg width="36" height="36" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#22d3ee"/><path d="M8 16l4-8 4 8" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
     )
@@ -42,12 +42,12 @@ const Education = () => (
       <h2 className="text-5xl font-extrabold mb-14 text-center bg-gradient-to-r from-pink-500 via-yellow-400 to-teal-400 bg-clip-text text-transparent drop-shadow-2xl animate-gradient-move">Education</h2>
       <div className="grid md:grid-cols-2 gap-12">
         {education.map((item, idx) => (
-          <div key={idx} className="relative group rounded-3xl p-1 bg-gradient-to-tr from-pink-400/70 via-yellow-200/60 to-teal-400/80 shadow-2xl animate-fade-in hover:scale-[1.03] transition-transform duration-300">
-            <div className="absolute -top-8 right-6 w-20 h-20 bg-pink-400 opacity-30 rounded-full blur-2xl group-hover:scale-125 transition-transform duration-500 z-0"></div>
-            <div className="absolute -bottom-8 left-6 w-16 h-16 bg-yellow-300 opacity-30 rounded-full blur-2xl group-hover:scale-110 transition-transform duration-500 z-0"></div>
-            <div className="relative z-10 bg-white/90 backdrop-blur-2xl rounded-2xl p-10 flex flex-col items-center text-center border-2 border-transparent bg-clip-padding min-h-[260px] text-gray-900 shadow-xl">
-              <div className="mb-4 animate-float">{item.icon}</div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-1 bg-gradient-to-r from-pink-400 via-yellow-400 to-teal-400 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300 drop-shadow-lg">{item.degree}</h3>
+          <div key={idx} className="relative group rounded-3xl p-1 bg-gradient-to-tr from-pink-400/70 via-yellow-200/60 to-teal-400/80 shadow-2xl animate-fade-in hover:scale-[1.05] transition-transform duration-500 border-4 border-transparent hover:border-pink-400/80 hover:shadow-pink-200/60">
+            <div className="absolute -top-8 right-6 w-20 h-20 bg-pink-400 opacity-30 rounded-full blur-2xl group-hover:scale-125 transition-transform duration-500 z-0 animate-blob1"></div>
+            <div className="absolute -bottom-8 left-6 w-16 h-16 bg-yellow-300 opacity-30 rounded-full blur-2xl group-hover:scale-110 transition-transform duration-500 z-0 animate-blob2"></div>
+            <div className="relative z-10 bg-white/60 backdrop-blur-2xl rounded-2xl p-10 flex flex-col items-center text-center border-2 border-white/30 bg-clip-padding min-h-[260px] text-gray-900 shadow-xl glassmorphism-card">
+              <div className="mb-4 animate-bounce-slow">{item.icon}</div>
+              <h3 className="text-2xl md:text-3xl font-bold mb-1 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg animated-border-text" style={{ color: '#111' }}>{item.degree}</h3>
               <div className="text-lg font-medium mb-1 text-blue-600 group-hover:text-blue-700 transition-colors duration-300">{item.field}</div>
               <div className="mb-2 text-gray-600 font-semibold">{item.institution}</div>
               <div className="text-sm text-teal-700 font-bold tracking-wide">{item.year}</div>
@@ -98,6 +98,36 @@ const Education = () => (
         @keyframes blob3 {
           0% { transform: scale(1) translate(0,0); }
           100% { transform: scale(1.08) translate(-20px, 40px); }
+        }
+        .glassmorphism-card {
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+          border-radius: 2rem;
+          border: 1.5px solid rgba(255,255,255,0.25);
+          background: rgba(255,255,255,0.35);
+          backdrop-filter: blur(12px);
+        }
+        .animate-bounce-slow {
+          animation: bounce 2.2s infinite cubic-bezier(.5,1.8,.5,1);
+        }
+        @keyframes bounce {
+          0%, 100% { transform: translateY(-10%); }
+          50% { transform: translateY(10%); }
+        }
+        .animated-border-text {
+          position: relative;
+        }
+        .animated-border-text:after {
+          content: '';
+          position: absolute;
+          left: 0; right: 0; bottom: -6px; height: 4px;
+          background: linear-gradient(90deg, #f472b6, #facc15, #2dd4bf, #f472b6);
+          background-size: 200% 200%;
+          animation: borderMove 2.5s linear infinite alternate;
+          border-radius: 2px;
+        }
+        @keyframes borderMove {
+          0% { background-position: 0% 50%; }
+          100% { background-position: 100% 50%; }
         }
       `}</style>
     </div>

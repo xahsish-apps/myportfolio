@@ -12,6 +12,9 @@ import Footer from "./components/Footer";
 import PageTransition from "./components/PageTransition";
 import AnimatedSection from "./components/AnimatedSection";
 import Support from "./components/Support";
+import BlogDetails from "./components/BlogDetails";
+import EcommerceBusiness from "./components/EcommerceBusiness";
+import PortfolioSummary from "./components/PortfolioSummary";
 
 function App() {
   return (
@@ -41,6 +44,9 @@ function App() {
               <Route path="/about" element={<PageTransition><AnimatedSection><About /></AnimatedSection></PageTransition>} />
               <Route path="/projects" element={<PageTransition><AnimatedSection><Projects /></AnimatedSection></PageTransition>} />
               <Route path="/contact" element={<PageTransition><AnimatedSection><Contact /></AnimatedSection></PageTransition>} />
+              <Route path="/blog-details" element={<PageTransition><AnimatedSection><BlogDetails /></AnimatedSection></PageTransition>} />
+              <Route path="/ecommerce-business" element={<PageTransition><AnimatedSection><EcommerceBusiness /></AnimatedSection></PageTransition>} />
+              <Route path="/portfolio-summary" element={<PageTransition><AnimatedSection><PortfolioSummary /></AnimatedSection></PageTransition>} />
             </Routes>
           </main>
           <Footer />

@@ -5,17 +5,20 @@ const projects = [
   {
     title: "Portfolio Website",
     description: "A personal portfolio website to showcase my work and skills.",
-    link: "#",
+    link: "/portfolio-summary",
+    isPortfolio: true,
   },
   {
     title: "E-commerce App",
     description: "A modern e-commerce application with shopping cart and payment integration.",
-    link: "#",
+    link: "/ecommerce-business",
+    isBusiness: true,
   },
   {
     title: "Blog Platform",
     description: "A full-featured blog platform with markdown support.",
-    link: "#",
+    link: "/blog-details",
+    isBlog: true,
   },
 ];
 
@@ -53,9 +56,17 @@ const Projects = () => {
                     <path d="M8 16L12 8L16 16" stroke="#14b8a6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">{project.title}</h3>
-                <p className="mb-4 flex-1 text-gray-800 group-hover:text-black transition-colors duration-300">{project.description}</p>
-                <a href={project.link} className="inline-block mt-auto px-6 py-2 rounded-xl bg-gradient-to-r from-teal-500 to-cyan-400 text-white font-semibold shadow-lg hover:scale-105 hover:bg-cyan-500 transition-transform duration-300">View Project</a>
+                <h3 className="text-2xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300" style={{ color: '#111' }}>{project.title}</h3>
+                <p className="mb-4 flex-1 group-hover:text-black transition-colors duration-300" style={{ color: '#111' }}>{project.description}</p>
+                {project.isBlog ? (
+                  <a href={project.link} className="inline-block mt-auto px-6 py-2 rounded-xl bg-gradient-to-r from-sky-400 to-sky-600 text-white font-semibold shadow-lg hover:scale-105 hover:bg-sky-700 transition-transform duration-300" style={{ color: '#111' }}>View Blog</a>
+                ) : project.isBusiness ? (
+                  <a href={project.link} className="inline-block mt-auto px-6 py-2 rounded-xl bg-gradient-to-r from-sky-400 to-sky-600 text-white font-semibold shadow-lg hover:scale-105 hover:bg-sky-700 transition-transform duration-300" style={{ color: '#111' }}>View</a>
+                ) : project.isPortfolio ? (
+                  <a href={project.link} className="inline-block mt-auto px-6 py-2 rounded-xl bg-gradient-to-r from-sky-400 to-sky-600 text-white font-semibold shadow-lg hover:scale-105 hover:bg-sky-700 transition-transform duration-300" style={{ color: '#111' }}>View</a>
+                ) : (
+                  <a href={project.link} className="inline-block mt-auto px-6 py-2 rounded-xl bg-gradient-to-r from-teal-500 to-cyan-400 text-white font-semibold shadow-lg hover:scale-105 hover:bg-cyan-500 transition-transform duration-300">View Project</a>
+                )}
               </div>
             </div>
           ))}

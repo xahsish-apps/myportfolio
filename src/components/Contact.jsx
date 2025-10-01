@@ -15,9 +15,18 @@ const Contact = () => {
     e.preventDefault();
     setSent(false);
     setError("");
-  emailjs.sendForm('service_ci5vare', 'template_17somzk', form.current, 'DGtUjrCVBZLLgAArT')
+      emailjs
+        .sendForm(
+          "service_9k6o8qh",
+          "template_rf2ekm9",
+          form.current,
+          "L6Vipcs6_OJAL1F6f"
+        )
       .then((result) => {
         setSent(true);
+          if (form.current) {
+            form.current.reset();
+          }
       }, (error) => {
         setError("Failed to send. Please try again.");
       });
@@ -39,8 +48,33 @@ const Contact = () => {
                   <path d="M7 9l5 5 5-5" stroke="#f472b6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
-              <h3 className="text-3xl font-bold mb-2 bg-gradient-to-r from-pink-400 via-yellow-400 to-teal-400 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">Let's Connect</h3>
-              <p className="mb-4 text-blue-600 group-hover:text-blue-700 transition-colors duration-300 font-medium">I'm open to opportunities, collaborations, and new connections. Reach out and I'll reply soon!</p>
+              <h3 className="text-3xl font-bold mb-2" style={{ color: '#0a2342' }}>Connect With Neha Chaudhary</h3>
+              <div className="mb-4 font-medium" style={{ color: '#0a2342', maxHeight: '420px', overflowY: 'auto', lineHeight: '1.7' }}>
+                <p>Welcome to my digital space!<br/></p>
+                <p>I'm Neha Chaudhary, a passionate developer and lifelong learner.<br/></p>
+                <p>Thank you for visiting my portfolio. I believe in the power of technology to transform ideas into reality.<br/></p>
+                <p>Whether you are a recruiter, a fellow developer, or just someone curious about my work, I'm glad you're here.<br/></p>
+                <p>My journey in tech is driven by curiosity, creativity, and a desire to solve real-world problems.<br/></p>
+                <p>I specialize in building responsive, accessible, and beautiful web applications.<br/></p>
+                <p>From frontend design to backend logic, I enjoy every step of the development process.<br/></p>
+                <p>Collaboration and teamwork are at the heart of my approach.<br/></p>
+                <p>I love connecting with like-minded people and learning from diverse perspectives.<br/></p>
+                <p>If you have an exciting project, a challenging problem, or just want to say hello, don't hesitate to reach out.<br/></p>
+                <p>I'm always open to new opportunities, freelance work, and creative collaborations.<br/></p>
+                <p>Let's build something amazing together!<br/></p>
+                <p>My skills include React, JavaScript, TypeScript, Tailwind CSS, and more.<br/></p>
+                <p>I am also experienced in UI/UX design and RESTful APIs.<br/></p>
+                <p>Continuous learning is my mantra—I'm always exploring new technologies.<br/></p>
+                <p>Outside of coding, I enjoy reading, music, and exploring new places.<br/></p>
+                <p>Thank you for your time and interest in my work.<br/></p>
+                <p>Feel free to connect with me on LinkedIn, GitHub, or Twitter.<br/></p>
+                <p>Your feedback and suggestions are always welcome.<br/></p>
+                <p>Scroll down to use the contact form or click any social icon.<br/></p>
+                <p>Every message is appreciated and will receive a prompt reply.<br/></p>
+                <p>Let's turn ideas into impactful solutions.<br/></p>
+                <p>Wishing you a wonderful day and happy coding!<br/></p>
+                <p>Best regards,<br/>Neha Chaudhary</p>
+              </div>
               <div className="flex space-x-4 mt-2">
                 <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-pink-400 hover:text-yellow-400 transition-colors text-3xl" title="LinkedIn"><i className="fab fa-linkedin"></i></a>
                 <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="text-yellow-400 hover:text-teal-400 transition-colors text-3xl" title="GitHub"><i className="fab fa-github"></i></a>
